@@ -1,36 +1,57 @@
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hey there~</title>
     <link href="./output.css" rel="stylesheet" />
   </head>
-  <body class="bg-blue-300">
-    <div class="flex h-16 items-center justify-between bg-white p-4">
+  <body>
+    <div class="flex h-16 items-center justify-between p-4">
       <img src="./imgs/logo.svg" alt="logo" />
 
-      <div class="flex space-x-4 text-blue-500">
-        <a href="#">Home</a>
-        <a href="#">Features</a>
-        <a href="#">Community</a>
-        <a href="#">Support</a>
+      <div class="join">
+        <a class="btn join-item" href="#">Home</a>
+        <a class="btn join-item" href="#">Features</a>
+        <a class="btn join-item" href="#">Community</a>
+        <a class="btn join-item" href="#">Support</a>
       </div>
 
       <div class="flex space-x-2">
-        <button
-          class="rounded-md border-2 border-blue-500 px-4 py-2 text-blue-500 transition
-            duration-500 ease-in-out hover:border-green-500 hover:bg-green-500
-            hover:text-white"
-        >
-          Login
-        </button>
+        <div class="dropdown dropdown-end">
+          <div class="btn" role="button" tabindex="0">Themes</div>
+          <ul class="dropdown-content rounded-box bg-base-300 z-[1] w-52">
+            <li>
+              <input
+                type="radio"
+                name="theme-dropdown"
+                aria-label="Light"
+                value="light"
+                class="theme-controller btn btn-ghost btn-block justify-start"
+              />
+            </li>
+            <li>
+              <input
+                type="radio"
+                name="theme-dropdown"
+                aria-label="Valentine"
+                value="valentine"
+                class="theme-controller btn btn-ghost btn-block justify-start"
+              />
+            </li>
+            <li>
+              <input
+                type="radio"
+                name="theme-dropdown"
+                aria-label="Retro"
+                value="retro"
+                class="theme-controller btn btn-ghost btn-block justify-start"
+              />
+            </li>
+          </ul>
+        </div>
+        <button class="btn btn-outline btn-primary">Login</button>
 
-        <button
-          class="rounded-md border-2 border-blue-500 bg-blue-500 px-4 py-2 text-white
-            hover:animate-spin"
-        >
-          Sign Up
-        </button>
+        <button class="btn btn-primary">Sign Up</button>
       </div>
     </div>
 
@@ -46,8 +67,7 @@
         <input class="h-full w-full rounded-full pl-10 pr-20 outline-none" />
 
         <button
-          class="absolute right-0 h-full rounded-br-2xl rounded-tr-2xl border border-white
-            bg-blue-500 px-4 text-white"
+          class="btn btn-primary absolute right-0 h-full rounded-br-2xl rounded-tr-2xl px-4"
         >
           Search
         </button>
